@@ -1,5 +1,6 @@
 import React from 'react';
 import filterStyles from "./Filter.module.css";
+import PropTypes from "prop-types";
 const Filter = ({ value, handleChange }) => {
   return (
     <label className={filterStyles.label}>
@@ -8,4 +9,10 @@ const Filter = ({ value, handleChange }) => {
     </label>
   );
 };
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired
+}
+
 export default Filter;

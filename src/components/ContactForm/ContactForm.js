@@ -1,5 +1,6 @@
 import React from 'react';
 import contactFormSryles from "./ContactForm.module.css";
+import PropTypes from "prop-types";
 import { useState } from 'react';
 const ContactForm = ({ addContact }) => {
   const [name, setName] = useState('');
@@ -61,4 +62,9 @@ const ContactForm = ({ addContact }) => {
     </form>
   );
 };
+
+ContactForm.propTypes = {
+  addContact: PropTypes.func.isRequired
+}
+
 export default ContactForm;
